@@ -67,6 +67,12 @@ return packer.startup(function(use)
     use {"nvim-treesitter/nvim-treesitter", run = "<CMD>TSUpdate"}
     use "p00f/nvim-ts-rainbow"
 
+    -- Autopairs
+    use "windwp/nvim-autopairs"
+
+    -- Comments
+    use "numToStr/Comment.nvim"
+
     if PACKER_BOOTSTRAP then
         require("packer").sync()
     end
