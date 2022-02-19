@@ -79,6 +79,9 @@ return packer.startup(function(use)
     -- File Tree
     use "kyazdani42/nvim-tree.lua"
 
+    -- Bufferline
+    use "akinsho/bufferline.nvim"
+
     if PACKER_BOOTSTRAP then
         require("packer").sync()
     end
