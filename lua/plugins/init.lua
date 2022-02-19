@@ -9,12 +9,13 @@ end
 vim.cmd([[
     augroup packer_user_config
         autocmd!
-        autocmd BufWritePost init.lua source <afile> | PackerSync
+        autocmd BufWritePost lua/plugins/init.lua source <afile> | PackerSync
     augroup end
 ]])
 
 local status_ok, packer = pcall(require, "packer")
 if not status_ok then
+    vim.notify("Error requiring packer")
     return
 end
 
@@ -31,6 +32,9 @@ return packer.startup(function(use)
     use "wbthomason/packer.nvim"
     use "nvim-lua/popup.nvim"
     use "nvim-lua/plenary.nvim"
+
+    -- Colorscheme
+    use "folke/tokyonight.nvim"
 
     if PACKER_BOOTSTRAP then
         require("packer").sync()
