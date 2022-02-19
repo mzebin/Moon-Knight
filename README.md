@@ -1,2 +1,2 @@
 # Moon-Knight
-Neovim Config in Lua
+My Neovim Config in [Lua](https://www.lua.org/)
