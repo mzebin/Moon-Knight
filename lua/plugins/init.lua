@@ -82,6 +82,9 @@ return packer.startup(function(use)
     -- Bufferline
     use "akinsho/bufferline.nvim"
 
+    -- Lualine
+    use "nvim-lualine/lualine.nvim"
+
     if PACKER_BOOTSTRAP then
         require("packer").sync()
     end
