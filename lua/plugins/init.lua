@@ -36,6 +36,29 @@ return packer.startup(function(use)
     -- Colorscheme
     use "folke/tokyonight.nvim"
 
+    -- Completion
+    use "hrsh7th/nvim-cmp"
+
+    -- Sources
+    use "hrsh7th/cmp-nvim-lsp"
+    use "hrsh7th/cmp-nvim-lua"
+    use "hrsh7th/cmp-buffer"
+    use "hrsh7th/cmp-path"
+    use "hrsh7th/cmp-cmdline"
+    use "saadparwaiz1/cmp_luasnip"
+
+    -- Snippets
+    use "L3MON4D3/LuaSnip"
+    use "rafamadriz/friendly-snippets"
+
+    -- LSP
+    use "neovim/nvim-lspconfig"
+    use "williamboman/nvim-lsp-installer"
+    use "ray-x/lsp_signature.nvim"
+
+    -- Formatter
+    use "jose-elias-alvarez/null-ls.nvim"
+
     if PACKER_BOOTSTRAP then
         require("packer").sync()
     end
