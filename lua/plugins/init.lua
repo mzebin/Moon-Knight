@@ -85,6 +85,9 @@ return packer.startup(function(use)
     -- Lualine
     use "nvim-lualine/lualine.nvim"
 
+    -- Terminal
+    use "akinsho/toggleterm.nvim"
+
     if PACKER_BOOTSTRAP then
         require("packer").sync()
     end
