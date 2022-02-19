@@ -59,6 +59,10 @@ return packer.startup(function(use)
     -- Formatter
     use "jose-elias-alvarez/null-ls.nvim"
 
+    -- Telescope
+    use "nvim-telescope/telescope.nvim"
+    use "ahmedkhalf/project.nvim"
+
     if PACKER_BOOTSTRAP then
         require("packer").sync()
     end
