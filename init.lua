@@ -1,5 +1,11 @@
+require("impatient").enable_profile()
+
+-- Better Notifications
+vim.notify = require("notify")
+
 require("core.options")
 require("core.keymaps")
+require("core.autocommands")
 require("colors.colorscheme")
 require("colors.highlights")
 require("plugins")
@@ -16,3 +22,6 @@ require("plugins.configs.lualine")
 require("plugins.configs.toggleterm")
 require("plugins.configs.alpha")
 require("plugins.configs.which-key")
+require("plugins.configs.better-escape")
+require("plugins.configs.mini")
+require("plugins.configs.nvim-colorizer")

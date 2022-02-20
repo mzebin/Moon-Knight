@@ -32,6 +32,8 @@ return packer.startup(function(use)
     use "wbthomason/packer.nvim"
     use "nvim-lua/popup.nvim"
     use "nvim-lua/plenary.nvim"
+    use "lewis6991/impatient.nvim"
+    use "max397574/better-escape.nvim"
 
     -- Colorscheme
     use "folke/tokyonight.nvim"
@@ -93,6 +95,15 @@ return packer.startup(function(use)
 
     -- Keybindings
     use "folke/which-key.nvim"
+
+    -- Notifications
+    use "rcarriga/nvim-notify"
+
+    -- Trailing Whitespace
+    use {"echasnovski/mini.nvim", branch = "stable"}
+
+    -- Colorizer
+    use "norcalli/nvim-colorizer.lua"
 
     if PACKER_BOOTSTRAP then
         require("packer").sync()

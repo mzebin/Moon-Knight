@@ -1,5 +1,6 @@
 local status_ok, which_key = pcall(require, "which-key")
 if not status_ok then
+    vim.notify("Error requiring which-key")
     return
 end
 
@@ -13,7 +14,7 @@ local mappings = {
     a = {"<CMD>Alpha<CR>", "Alpha"},
     c = {"<CMD>bdelete!<CR>", "Close Buffer"},
     q = {"<CMD>q<CR>", "Quit"},
-    T = {"<CMD>Telescope builtin theme=get_dropdown previewer=false<CR>", "Telescope"},
+    T = {"<CMD>Telescope<CR>", "Telescope"},
     w = {"<CMD>w<CR>", "Save"},
 
     f = {

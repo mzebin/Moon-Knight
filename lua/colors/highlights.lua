@@ -1,5 +1,6 @@
 vim.highlight.create("StatusLine", {guibg = "NONE"}, false)
 vim.highlight.create("StatusLineNC", {guibg = "NONE"}, false)
+vim.highlight.create("MiniTrailspace", {guibg = "#FF2020"}, false)
 vim.highlight.create("CustomDashboardHeader", {guifg = "#28AFB0"}, false)
 vim.highlight.create("CustomDashboardFooter", {guifg = "#37FF8B"}, false)
 vim.highlight.create("CustomDashboardButtons", {guifg = "#C1B8C8"}, false)
