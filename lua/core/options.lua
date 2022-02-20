@@ -31,7 +31,7 @@ local options = {
     syntax = "enable",
     tabstop = 4,
     termguicolors = true,
-    timeoutlen = 1000,
+    timeoutlen = 100,
     updatetime = 300,
     wrap = false,
 }
