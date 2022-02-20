@@ -88,6 +88,9 @@ return packer.startup(function(use)
     -- Terminal
     use "akinsho/toggleterm.nvim"
 
+    -- Alpha
+    use "goolord/alpha-nvim"
+
     if PACKER_BOOTSTRAP then
         require("packer").sync()
     end
