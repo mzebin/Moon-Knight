@@ -91,6 +91,9 @@ return packer.startup(function(use)
     -- Alpha
     use "goolord/alpha-nvim"
 
+    -- Keybindings
+    use "folke/which-key.nvim"
+
     if PACKER_BOOTSTRAP then
         require("packer").sync()
     end
