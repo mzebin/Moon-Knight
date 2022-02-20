@@ -2,9 +2,9 @@
 My Neovim Config in [Lua](https://www.lua.org/)
 
 ## 🌟 Screenshots
-[Screenshot1](./screenshots/screenshot_1.png)
-[Screenshot2](./screenshots/screenshot_2.png)
-[Screenshot3](./screenshots/screenshot_3.png)
+![Screenshot1](./screenshots/screenshot_1.png)
+![Screenshot2](./screenshots/screenshot_2.png)
+![Screenshot3](./screenshots/screenshot_3.png)
 
 ## ⚡ Requirements
 * [Nerd Fonts](https://www.nerdfonts.com/font-downloads)
