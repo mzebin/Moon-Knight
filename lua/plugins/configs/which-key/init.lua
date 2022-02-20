@@ -12,7 +12,7 @@ local opts = {
 
 local mappings = {
     a = {"<CMD>Alpha<CR>", "Alpha"},
-    c = {"<CMD>bdelete!<CR>", "Close Buffer"},
+    c = {"<CMD>Bdelete!<CR>", "Close Buffer"},
     q = {"<CMD>q<CR>", "Quit"},
     T = {"<CMD>Telescope<CR>", "Telescope"},
     w = {"<CMD>w<CR>", "Save"},

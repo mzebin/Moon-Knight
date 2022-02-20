@@ -105,6 +105,9 @@ return packer.startup(function(use)
     -- Colorizer
     use "norcalli/nvim-colorizer.lua"
 
+    -- Buffers
+    use "famiu/bufdelete.nvim"
+
     if PACKER_BOOTSTRAP then
         require("packer").sync()
     end
