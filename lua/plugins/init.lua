@@ -116,6 +116,9 @@ return packer.startup(function(use)
     -- Buffers
     use "famiu/bufdelete.nvim"
 
+    -- Zen Mode
+    use {"folke/zen-mode.nvim", config = require("plugins.configs.zen-mode")}
+
     if PACKER_BOOTSTRAP then
         require("packer").sync()
     end
