@@ -33,13 +33,13 @@ return packer.startup(function(use)
     use "nvim-lua/popup.nvim"
     use "nvim-lua/plenary.nvim"
     use "lewis6991/impatient.nvim"
-    use "max397574/better-escape.nvim"
+    use {"max397574/better-escape.nvim", config = require("plugins.configs.better-escape")}
 
     -- Colorscheme
     use "folke/tokyonight.nvim"
 
     -- Completion
-    use "hrsh7th/nvim-cmp"
+    use {"hrsh7th/nvim-cmp", config = require("plugins.configs.cmp")}
 
     -- Sources
     use "hrsh7th/cmp-nvim-lsp"
@@ -54,7 +54,7 @@ return packer.startup(function(use)
     use "rafamadriz/friendly-snippets"
 
     -- LSP
-    use "neovim/nvim-lspconfig"
+    use {"neovim/nvim-lspconfig", config = require("plugins.configs.lsp")}
     use "williamboman/nvim-lsp-installer"
     use "ray-x/lsp_signature.nvim"
 
@@ -62,48 +62,56 @@ return packer.startup(function(use)
     use "jose-elias-alvarez/null-ls.nvim"
 
     -- Telescope
-    use "nvim-telescope/telescope.nvim"
+    use {"nvim-telescope/telescope.nvim", config = require("plugins.configs.telescope")}
     use "ahmedkhalf/project.nvim"
 
     -- Treesitter
-    use {"nvim-treesitter/nvim-treesitter", run = "<CMD>TSUpdate"}
+    use {
+        "nvim-treesitter/nvim-treesitter",
+        run = "<CMD>TSUpdate",
+        config = require("plugins.configs.treesitter"),
+    }
     use "p00f/nvim-ts-rainbow"
 
     -- Autopairs
-    use "windwp/nvim-autopairs"
+    use {"windwp/nvim-autopairs", config = require("plugins.configs.autopairs")}
 
     -- Comments
-    use "numToStr/Comment.nvim"
+    use {"numToStr/Comment.nvim", config = require("plugins.configs.comment")}
 
     -- Gitsigns
-    use "lewis6991/gitsigns.nvim"
+    use {"lewis6991/gitsigns.nvim", config = require("plugins.configs.gitsigns")}
 
     -- File Tree
-    use "kyazdani42/nvim-tree.lua"
+    use {"kyazdani42/nvim-tree.lua", config = require("plugins.configs.nvim-tree")}
 
     -- Bufferline
-    use "akinsho/bufferline.nvim"
+    use {"akinsho/bufferline.nvim", config = require("plugins.configs.bufferline")}
 
     -- Lualine
-    use "nvim-lualine/lualine.nvim"
+    use {"nvim-lualine/lualine.nvim", config = require("plugins.configs.lualine")}
 
     -- Terminal
-    use "akinsho/toggleterm.nvim"
+    use {"akinsho/toggleterm.nvim", config = require("plugins.configs.toggleterm")}
 
     -- Alpha
-    use "goolord/alpha-nvim"
+    use {"goolord/alpha-nvim", config = require("plugins.configs.alpha")}
 
     -- Keybindings
-    use "folke/which-key.nvim"
+    use {"folke/which-key.nvim", config = require("plugins.configs.which-key")}
 
     -- Notifications
     use "rcarriga/nvim-notify"
 
     -- Trailing Whitespace
-    use {"echasnovski/mini.nvim", branch = "stable"}
+    use {
+        "echasnovski/mini.nvim",
+        branch = "stable",
+        config = require("plugins.configs.mini"),
+    }
 
     -- Colorizer
-    use "norcalli/nvim-colorizer.lua"
+    use {"norcalli/nvim-colorizer.lua", config = require("plugins.configs.nvim-colorizer")}
 
     -- Buffers
     use "famiu/bufdelete.nvim"
