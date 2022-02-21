@@ -119,6 +119,9 @@ return packer.startup(function(use)
     -- Zen Mode
     use {"folke/zen-mode.nvim", config = require("plugins.configs.zen-mode")}
 
+    -- Tagbar
+    use {"preservim/tagbar", config = require("plugins.configs.tagbar")}
+
     if PACKER_BOOTSTRAP then
         require("packer").sync()
     end

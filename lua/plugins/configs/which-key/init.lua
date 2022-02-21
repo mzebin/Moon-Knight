@@ -11,11 +11,13 @@ local opts = {
 }
 
 local mappings = {
-    a = {"<CMD>Alpha<CR>", "Alpha"},
+    A = {"<CMD>Alpha<CR>", "Alpha"},
     c = {"<CMD>Bdelete!<CR>", "Close Buffer"},
+    O = {"<CMD>TagbarToggle<CR>", "Tagbar"},
     q = {"<CMD>q<CR>", "Quit"},
     T = {"<CMD>Telescope<CR>", "Telescope"},
     w = {"<CMD>w<CR>", "Save"},
+    Z = {"<CMD>ZenMode<CR>", "Zen Mode"},
 
     f = {
         name = "File",
