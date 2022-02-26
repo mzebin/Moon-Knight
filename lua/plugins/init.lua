@@ -122,6 +122,8 @@ return packer.startup(function(use)
     -- Tagbar
     use {"preservim/tagbar", config = require("plugins.configs.tagbar")}
 
+    use {"lukas-reineke/indent-blankline.nvim", config = require("plugins.configs.indent-blankline")}
+
     if PACKER_BOOTSTRAP then
         require("packer").sync()
     end

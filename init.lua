@@ -1,7 +1,9 @@
-require("impatient").enable_profile()
+-- Faster Startup
+_, impatient = pcall(require, "impatient")
+impatient.enable_profile()
 
 -- Better Notifications
-vim.notify = require("notify")
+_, vim.notify = pcall(require, "notify")
 
 require("core")
 require("colors")
