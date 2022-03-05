@@ -29,4 +29,10 @@ function _RUN_TOGGLE()
         local python3_run = Terminal:new({cmd = "python3 " .. file_name, hidden = true, close_on_exit = false})
         python3_run:toggle()
     end
+
+    -- C++
+    if file_type == "cpp" then
+        local cpp_run = Terminal:new({cmd = "c++ " .. file_name .. " -o .temp.out; ./.temp.out;rm -rf .temp.out", hidden = true, close_on_exit = false})
+        cpp_run:toggle()
+    end
 end
