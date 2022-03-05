@@ -11,7 +11,9 @@ null_ls.setup {
     debug = false,
     sources = {
         -- Python
-        diagnostics.pylint,
+        diagnostics.pylint.with({
+            extra_args = {"--errors-only"}
+        }),
         formatting.black,
 
         -- Lua
