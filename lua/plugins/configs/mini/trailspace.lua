@@ -1,6 +1,6 @@
 local status_ok, mini_trailspace = pcall(require, "mini.trailspace")
 if not status_ok then
-    vim.notify("Error requiring mini.trailspace")
+    vim.notify("Unable to require mini.trailspace", "error", {title="Mini"})
     return
 end
 

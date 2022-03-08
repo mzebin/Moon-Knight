@@ -1,6 +1,6 @@
 local status_ok, alpha = pcall(require, "alpha")
 if not status_ok then
-    vim.notify("Error requiring alpha")
+    vim.notify("Unable to require alpha", "error", {title="Alpha"})
     return
 end
 

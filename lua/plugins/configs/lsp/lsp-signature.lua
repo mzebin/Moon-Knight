@@ -1,6 +1,6 @@
 local status_ok, lsp_signature = pcall(require, "lsp_signature")
 if not status_ok then
-    vim.notify("Error requiring lsp_signature")
+    vim.notify("Unable to require lsp_signature", "error", {title="LSP"})
     return
 end
 

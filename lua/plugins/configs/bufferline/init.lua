@@ -1,6 +1,6 @@
 local status_ok, bufferline = pcall(require, "bufferline")
 if not status_ok then
-    vim.notify("Error requiring bufferline")
+    vim.notify("Unable to require bufferline", "error", {title="Bufferline"})
     return
 end
 

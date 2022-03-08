@@ -1,6 +1,6 @@
 local status_ok, which_key = pcall(require, "which-key")
 if not status_ok then
-    vim.notify("Error requiring which-key")
+    vim.notify("Unable to require which-key", "error", {title="Which Key"})
     return
 end
 

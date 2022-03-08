@@ -1,6 +1,6 @@
 local status_ok, npairs = pcall(require, "nvim-autopairs")
 if not status_ok then
-    vim.notify("Error requiring nvim-autopairs")
+    vim.notify("Unable to require nvim-autopairs", "error", {title="Nvim Autopairs"})
     return
 end
 
@@ -16,7 +16,7 @@ local cmp_npairs = require("nvim-autopairs.completion.cmp")
 
 local cmp_status_ok, cmp = pcall(require, "cmp")
 if not cmp_status_ok then
-    vim.notify("Error requiring cmp")
+    vim.notify("Unable to require cmp", "error", {title="Nvim Autopairs"})
     return
 end
 
