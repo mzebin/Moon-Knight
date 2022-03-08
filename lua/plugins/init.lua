@@ -76,9 +76,6 @@ return packer.startup(function(use)
     -- Autopairs
     use {"windwp/nvim-autopairs", config = require("plugins.configs.autopairs")}
 
-    -- Comments
-    use {"numToStr/Comment.nvim", config = require("plugins.configs.comment")}
-
     -- Gitsigns
     use {"lewis6991/gitsigns.nvim", config = require("plugins.configs.gitsigns")}
 
@@ -103,7 +100,7 @@ return packer.startup(function(use)
     -- Notifications
     use "rcarriga/nvim-notify"
 
-    -- Trailing Whitespace
+    -- Minimal Plugins
     use {
         "echasnovski/mini.nvim",
         branch = "stable",
@@ -122,6 +119,7 @@ return packer.startup(function(use)
     -- Tagbar
     use {"preservim/tagbar", config = require("plugins.configs.tagbar")}
 
+    -- Indent Lines
     use {"lukas-reineke/indent-blankline.nvim", config = require("plugins.configs.indent-blankline")}
 
     if PACKER_BOOTSTRAP then
