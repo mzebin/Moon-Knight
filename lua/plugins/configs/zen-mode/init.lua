@@ -14,4 +14,12 @@ zen_mode.setup({
             cursorcolumn = false,
         },
     },
+    on_open = function ()
+        vim.cmd("IndentBlanklineDisable")
+        vim.cmd("set colorcolumn=")
+    end,
+    on_close = function ()
+        vim.cmd("IndentBlanklineEnable")
+        vim.cmd("set colorcolumn=80")
+    end
 })
