@@ -110,9 +110,6 @@ return packer.startup(function(use)
     -- Colorizer
     use {"norcalli/nvim-colorizer.lua", config = require("plugins.configs.nvim-colorizer")}
 
-    -- Buffers
-    use "famiu/bufdelete.nvim"
-
     -- Zen Mode
     use {"folke/zen-mode.nvim", config = require("plugins.configs.zen-mode")}
 

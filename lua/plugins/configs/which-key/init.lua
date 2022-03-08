@@ -12,7 +12,7 @@ local opts = {
 
 local mappings = {
     A = {"<CMD>Alpha<CR>", "Alpha"},
-    c = {"<CMD>Bdelete!<CR>", "Close Buffer"},
+    c = {"<CMD>lua MiniBufremove.delete()<CR>", "Close Buffer"},
     O = {"<CMD>TagbarToggle<CR>", "Tagbar"},
     q = {"<CMD>q<CR>", "Quit"},
     T = {"<CMD>Telescope<CR>", "Telescope"},
