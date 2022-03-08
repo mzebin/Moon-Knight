@@ -1,5 +1,5 @@
 -- Faster Startup
-_, impatient = pcall(require, "impatient")
+local _, impatient = pcall(require, "impatient")
 impatient.enable_profile()
 
 -- Better Notifications

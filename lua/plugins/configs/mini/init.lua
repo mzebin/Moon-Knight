@@ -6,3 +6,6 @@ require("plugins.configs.mini.trailspace")
 
 -- Close Buffers
 require("plugins.configs.mini.bufremove")
+
+-- Surround
+require("plugins.configs.mini.surround")
