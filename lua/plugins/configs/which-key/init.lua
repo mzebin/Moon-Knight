@@ -12,12 +12,20 @@ local opts = {
 
 local mappings = {
     A = {"<CMD>Alpha<CR>", "Alpha"},
-    c = {"<CMD>lua MiniBufremove.delete()<CR>", "Close Buffer"},
+    C = {"<CMD>lua MiniBufremove.delete()<CR>", "Close Buffer"},
     O = {"<CMD>TagbarToggle<CR>", "Tagbar"},
-    q = {"<CMD>q<CR>", "Quit"},
+    Q = {"<CMD>q<CR>", "Quit"},
     T = {"<CMD>Telescope<CR>", "Telescope"},
-    w = {"<CMD>w<CR>", "Save"},
+    W = {"<CMD>w<CR>", "Save"},
     Z = {"<CMD>ZenMode<CR>", "Zen Mode"},
+
+    c = {
+        name = "Configs",
+        b = {"<CMD>e ~/.bashrc<CR>", "Edit ~/.bashrc"},
+        n = {"<CMD>cd ~/.config/nvim | e init.lua<CR>", "Edit init.lua"},
+        v = {"<CMD>e ~/.vimrc<CR>", "Edit ~/.vimrc"},
+        z = {"<CMD>e ~/.zshrc<CR>", "Edit ~/.zshrc"},
+    },
 
     f = {
         name = "File",

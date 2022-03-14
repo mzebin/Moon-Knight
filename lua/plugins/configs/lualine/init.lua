@@ -58,7 +58,7 @@ lualine.setup({
         theme = "auto",
         component_separators = {left = "", right = ""},
         section_separators = {left = "", right = ""},
-        disabled_filetypes = {"NvimTree", "alpha"},
+        disabled_filetypes = {"NvimTree", "alpha", "toggleterm"},
         always_divide_middle = true,
     },
 	sections = {
