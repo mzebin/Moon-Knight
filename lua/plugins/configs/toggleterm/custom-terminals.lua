@@ -14,7 +14,7 @@ end
 
 -- Python3
 function _PYTHON3_TOGGLE()
-    local python3 = Terminal:new({cmd = "python3", hidden = true})
+    local python3 = Terminal:new({cmd = "bpython", hidden = true})
 	python3:toggle()
 end
 
