@@ -23,6 +23,7 @@ local options = {
     scrolloff = 10,
     shiftwidth = 4,
     showmode = false,
+    showtabline = 2,
     sidescrolloff = 10,
     signcolumn = "yes",
     smartcase = true,
