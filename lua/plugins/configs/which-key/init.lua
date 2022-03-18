@@ -22,7 +22,7 @@ local mappings = {
     c = {
         name = "Configs",
         b = {"<CMD>e ~/.bashrc<CR>", "Edit ~/.bashrc"},
-        n = {"<CMD>cd ~/.config/nvim | e init.lua<CR>", "Edit init.lua"},
+        c = {"<CMD>cd ~/.config/nvim | e init.lua<CR>", "Edit init.lua"},
         v = {"<CMD>e ~/.vimrc<CR>", "Edit ~/.vimrc"},
         z = {"<CMD>e ~/.zshrc<CR>", "Edit ~/.zshrc"},
     },

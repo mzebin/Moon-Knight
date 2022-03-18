@@ -35,4 +35,10 @@ function _RUN_TOGGLE()
         local cpp_run = Terminal:new({cmd = "c++ " .. file_name .. " -o .temp.out; ./.temp.out;rm -rf .temp.out", hidden = true, close_on_exit = false})
         cpp_run:toggle()
     end
+
+    -- Lua
+    if file_type == "lua" then
+        local lua_run = Terminal:new({cmd = "lua " .. file_name, hidden = true, close_on_exit = false})
+        lua_run:toggle()
+    end
 end
