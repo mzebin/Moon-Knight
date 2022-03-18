@@ -9,7 +9,7 @@ end
 vim.cmd([[
     augroup packer_user_config
         autocmd!
-        autocmd BufWritePost lua/plugins/init.lua source <afile> | PackerSync
+        autocmd BufWritePost ~/.config/nvim/lua/plugins/init.lua source <afile> | PackerSync
     augroup end
 ]])
 
@@ -35,8 +35,9 @@ local plugins = {
     "lewis6991/impatient.nvim",
     {"max397574/better-escape.nvim", config = require("plugins.configs.better-escape")},
 
-    -- Colorscheme
+    -- Colorschemes
     "folke/tokyonight.nvim",
+    "LunarVim/onedarker.nvim",
 
     -- Completion
     {"hrsh7th/nvim-cmp", config = require("plugins.configs.cmp")},
