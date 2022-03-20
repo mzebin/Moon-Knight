@@ -16,7 +16,6 @@ local options = {
     incsearch = true,
     mouse = "a",
     number = true,
-    numberwidth = 4,
     pumblend = 10,
     pumheight = 10,
     relativenumber = true,

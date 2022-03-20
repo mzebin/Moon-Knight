@@ -60,17 +60,9 @@ lualine.setup({
         section_separators = {left = "", right = ""},
         disabled_filetypes = {"NvimTree", "alpha", "toggleterm"},
         always_divide_middle = true,
+        globalstatus = true,
     },
 	sections = {
-		lualine_a = {mode},
-		lualine_b = {branch, diagnostics},
-		lualine_c = {diff},
-
-		lualine_x = {spaces, "encoding"},
-		lualine_y = {filetype},
-		lualine_z = {location},
-	},
-	inactive_sections = {
 		lualine_a = {mode},
 		lualine_b = {branch, diagnostics},
 		lualine_c = {diff, "filename"},
@@ -79,6 +71,4 @@ lualine.setup({
 		lualine_y = {filetype},
 		lualine_z = {location},
 	},
-	tabline = {},
-	extensions = {},
 })

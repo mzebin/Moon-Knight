@@ -32,6 +32,7 @@ local plugins = {
     "wbthomason/packer.nvim",
     "nvim-lua/popup.nvim",
     "nvim-lua/plenary.nvim",
+    "kyazdani42/nvim-web-devicons",
     "lewis6991/impatient.nvim",
     {"max397574/better-escape.nvim", config = require("plugins.configs.better-escape")},
 
