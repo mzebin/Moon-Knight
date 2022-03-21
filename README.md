@@ -8,7 +8,7 @@ My Neovim Config in [Lua](https://www.lua.org/)
 
 ## ⚡ Requirements
 * [Nerd Fonts](https://www.nerdfonts.com/font-downloads)
-* [Neovim 0.6+](https://github.com/neovim/neovim/releases/tag/v0.6.0)
+* [Neovim 0.7+](https://github.com/neovim/neovim/releases)
 * [bpython](https://www.bpython-interpreter.org/)
 
 ## Structure
