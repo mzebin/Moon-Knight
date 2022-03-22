@@ -39,6 +39,7 @@ local plugins = {
     -- Colorschemes
     "folke/tokyonight.nvim",
     "LunarVim/onedarker.nvim",
+    "Mofiqul/vscode.nvim",
 
     -- Completion
     {"hrsh7th/nvim-cmp", config = require("plugins.configs.cmp")},
