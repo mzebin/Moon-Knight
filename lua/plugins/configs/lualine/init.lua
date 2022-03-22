@@ -45,7 +45,7 @@ local branch = {
 
 local location = {
     "location",
-    padding = 0,
+    padding = {right = 1},
 }
 
 local spaces = function()
