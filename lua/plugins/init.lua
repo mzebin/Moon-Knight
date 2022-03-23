@@ -85,16 +85,17 @@ local plugins = {
     -- File Tree
     {"kyazdani42/nvim-tree.lua", config = require("plugins.configs.nvim-tree")},
 
-    -- Bufferline
+    -- Tabline
     {"akinsho/bufferline.nvim", config = require("plugins.configs.bufferline")},
 
-    -- Lualine
+    -- Statusline
     {"nvim-lualine/lualine.nvim", config = require("plugins.configs.lualine")},
+    {"SmiteshP/nvim-gps", config = require("plugins.configs.nvim-gps")},
 
     -- Terminal
     {"akinsho/toggleterm.nvim", config = require("plugins.configs.toggleterm")},
 
-    -- Alpha
+    -- Start Page
     {"goolord/alpha-nvim", config = require("plugins.configs.alpha")},
 
     -- Keybindings
@@ -116,7 +117,7 @@ local plugins = {
     -- Zen Mode
     {"folke/zen-mode.nvim", config = require("plugins.configs.zen-mode")},
 
-    -- Tagbar
+    -- Outline
     {"preservim/tagbar", config = require("plugins.configs.tagbar")},
 
     -- Indent Lines

@@ -6,9 +6,9 @@ end
 
 zen_mode.setup({
     window = {
-        backdrop = 0.75,
+        backdrop = 0.9,
         width = 0.9,
-        height = 1,
+        height = 0.9,
         options = {
             relativenumber = false,
             cursorcolumn = false,
