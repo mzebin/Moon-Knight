@@ -10,6 +10,7 @@ local options = {
     expandtab = true,
     fileencoding = "utf-8",
     foldlevel = 99,
+    foldmethod = "indent",
     guifont = "FiraCode Nerd Font:h14",
     hlsearch = false,
     ignorecase = true,
