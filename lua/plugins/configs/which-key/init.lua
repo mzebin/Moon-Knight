@@ -12,12 +12,19 @@ local opts = {
 
 local mappings = {
     A = {"<CMD>Alpha<CR>", "Alpha"},
-    C = {"<CMD>lua MiniBufremove.delete()<CR>", "Close Buffer"},
     O = {"<CMD>TagbarToggle<CR>", "Tagbar"},
     Q = {"<CMD>q<CR>", "Quit"},
     T = {"<CMD>Telescope<CR>", "Telescope"},
     W = {"<CMD>w<CR>", "Save"},
     Z = {"<CMD>ZenMode<CR>", "Zen Mode"},
+
+    b = {
+        name = "Buffer",
+        c = {"<CMD>lua MiniBufremove.delete()<CR>", "Close Buffer"},
+        f = {"<CMD>Telescope buffers theme=dropdown previewer=false", "Find Buffers"},
+        n = {"<CMD>bnext<CR>", "Next Buffer"},
+        p = {"<CMD>bprevious<CR>", "Previous Buffer"},
+    },
 
     c = {
         name = "Configs",
@@ -32,7 +39,7 @@ local mappings = {
         e = {"<CMD>NvimTreeToggle<CR>", "Explorer"},
         f = {"<CMD>Telescope find_files<CR>", "Find Files"},
         n = {"<CMD>ene <BAR> startinsert<CR>", "New File"},
-        o = {"<CMD>Telescope find_files theme=dropdown previewer=false<CR>", "Open File"},
+        o = {"<CMD>Telescope find_files theme=dropdown previewer=false prompt_title=Open\\ Files<CR>", "Open File"},
     },
 
     g = {
@@ -81,7 +88,6 @@ local mappings = {
     s = {
         name = "Search",
         b = {"<CMD>Telescope git_branches<CR>", "Checkout branch"},
-        B = {"<CMD>Telescope buffers theme=get_dropdown previewer=false", "Buffers"},
         c = {"<CMD>Telescope colorscheme theme=get_dropdown previewer=false<CR>", "Colorscheme"},
         C = {"<CMD>Telescope commands<CR>", "Commands"},
         h = {"<CMD>Telescope help_tags<CR>", "Find Help"},
