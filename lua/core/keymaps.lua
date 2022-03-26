@@ -10,12 +10,18 @@ vim.g.maplocalleader = " "
 
 -- INSERT --
 
+-- Escape
+keymap("i", "<Esc>", "<Esc><CMD>set nohlsearch<CR>", opts)
+
 -- Undo break points
 keymap("i", ".", ".<C-g>u", opts)
 keymap("i", " ", " <C-g>u", opts)
 keymap("i", ",", ",<C-g>u", opts)
 
 -- NORMAL --
+
+-- Escape
+keymap("n", "<Esc>", "<Esc><CMD>set nohlsearch<CR>", opts)
 
 -- Move lines up and down
 keymap("n", "<A-j>", "<CMD>m .+1<CR>==", opts)

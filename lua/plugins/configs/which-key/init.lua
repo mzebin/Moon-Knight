@@ -38,6 +38,7 @@ local mappings = {
         name = "File",
         e = {"<CMD>NvimTreeToggle<CR>", "Explorer"},
         f = {"<CMD>Telescope find_files<CR>", "Find Files"},
+        g = {"<CMD>Telescope git_files<CR>", "Git Files"},
         n = {"<CMD>ene <BAR> startinsert<CR>", "New File"},
         o = {"<CMD>Telescope find_files theme=dropdown previewer=false prompt_title=Open\\ Files<CR>", "Open File"},
     },
@@ -66,10 +67,10 @@ local mappings = {
         f = {"<CMD>lua vim.lsp.buf.formatting()<CR>", "Format"},
         i = {"<CMD>LspInfo<CR>", "Info"},
         I = {"<CMD>LspInstallInfo<CR>", "Installer Info"},
-        j = {"<CMD>lua vim.lsp.diagnostic.goto_next()<CR>", "Next Diagnostic"},
-        k = {"<CMD>lua vim.lsp.diagnostic.goto_prev()<CR>", "Prev Diagnostic"},
+        j = {"<CMD>lua vim.diagnostic.goto_next()<CR>", "Next Diagnostic"},
+        k = {"<CMD>lua vim.diagnostic.goto_prev()<CR>", "Prev Diagnostic"},
         l = {"<CMD>lua vim.lsp.codelens.run()<CR>", "CodeLens Action"},
-        q = {"<CMD>lua vim.lsp.diagnostic.set_loclist()<CR>", "Quickfix"},
+        q = {"<CMD>lua vim.diagnostic.setloclist()<CR>", "Quickfix"},
         r = {"<CMD>lua vim.lsp.buf.rename()<CR>", "Rename"},
         s = {"<CMD>Telescope lsp_document_symbols<CR>", "Document Symbols"},
         S = {"<CMD>Telescope lsp_dynamic_workspace_symbols<CR>", "Workspace Symbols"},
@@ -83,6 +84,14 @@ local mappings = {
         s = {"<CMD>PackerSync<CR>", "Sync"},
         S = {"<CMD>PackerStatus<CR>", "Status"},
         u = {"<CMD>PackerUpdate<CR>", "Update"},
+    },
+
+    q = {
+        name = "Quickfix",
+        c = {"<CMD>cclose<CR>", "Close"},
+        n = {"<CMD>cnext<CR>", "Next"},
+        o = {"<CMD>copen<CR>", "Open"},
+        p = {"<CMD>cprevious<CR>", "Open"},
     },
 
     s = {
