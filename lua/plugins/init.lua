@@ -40,6 +40,9 @@ local plugins = {
     "folke/tokyonight.nvim",
     "LunarVim/onedarker.nvim",
     "Mofiqul/vscode.nvim",
+    "catppuccin/nvim",
+    "shaunsingh/nord.nvim",
+    "tiagovla/tokyodark.nvim",
 
     -- Completion
     {"hrsh7th/nvim-cmp", config = require("plugins.configs.cmp")},

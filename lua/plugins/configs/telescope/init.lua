@@ -10,6 +10,9 @@ local actions = require("telescope.actions")
 telescope.load_extension("projects")
 require("plugins.configs.telescope.projects")
 
+-- Load Custom functions
+require("plugins.configs.telescope.custom-functions")
+
 telescope.setup({
   defaults = {
     prompt_prefix = "   ",

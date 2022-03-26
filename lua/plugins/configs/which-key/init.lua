@@ -12,7 +12,7 @@ local opts = {
 
 local mappings = {
     A = {"<CMD>Alpha<CR>", "Alpha"},
-    C = {"<CMD>Telescope find_files prompt_title=Neovim\\ Configs cwd=$HOME/.config/nvim/ theme=dropdown previewer=false<CR>", "Neovim Configs"},
+    C = {"<CMD>lua _NEOVIM_CONFIGS()<CR>", "Neovim Configs"},
     O = {"<CMD>TagbarToggle<CR>", "Tagbar"},
     Q = {"<CMD>q<CR>", "Quit"},
     T = {"<CMD>Telescope<CR>", "Telescope"},
@@ -33,7 +33,7 @@ local mappings = {
         f = {"<CMD>Telescope find_files<CR>", "Find Files"},
         g = {"<CMD>Telescope git_files<CR>", "Git Files"},
         n = {"<CMD>ene <BAR> startinsert<CR>", "New File"},
-        o = {"<CMD>Telescope find_files theme=dropdown previewer=false prompt_title=Open\\ Files<CR>", "Open File"},
+        o = {"<CMD>lua _OPEN_FILES()<CR>", "Open File"},
     },
 
     g = {
@@ -90,7 +90,7 @@ local mappings = {
     s = {
         name = "Search",
         b = {"<CMD>Telescope git_branches<CR>", "Checkout branch"},
-        c = {"<CMD>Telescope colorscheme theme=get_dropdown previewer=false<CR>", "Colorscheme"},
+        c = {"<CMD>lua _COLORSCHEME()<CR>", "Colorscheme"},
         C = {"<CMD>Telescope commands<CR>", "Commands"},
         h = {"<CMD>Telescope help_tags<CR>", "Find Help"},
         k = {"<CMD>Telescope keymaps<CR>", "Keymaps"},
