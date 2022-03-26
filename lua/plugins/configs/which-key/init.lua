@@ -12,6 +12,7 @@ local opts = {
 
 local mappings = {
     A = {"<CMD>Alpha<CR>", "Alpha"},
+    C = {"<CMD>Telescope find_files prompt_title=Neovim\\ Configs cwd=$HOME/.config/nvim/ theme=dropdown previewer=false<CR>", "Neovim Configs"},
     O = {"<CMD>TagbarToggle<CR>", "Tagbar"},
     Q = {"<CMD>q<CR>", "Quit"},
     T = {"<CMD>Telescope<CR>", "Telescope"},
@@ -24,14 +25,6 @@ local mappings = {
         f = {"<CMD>Telescope buffers theme=dropdown previewer=false", "Find Buffers"},
         n = {"<CMD>bnext<CR>", "Next Buffer"},
         p = {"<CMD>bprevious<CR>", "Previous Buffer"},
-    },
-
-    c = {
-        name = "Configs",
-        b = {"<CMD>e ~/.bashrc<CR>", "Edit ~/.bashrc"},
-        c = {"<CMD>cd ~/.config/nvim | e init.lua<CR>", "Edit init.lua"},
-        v = {"<CMD>e ~/.vimrc<CR>", "Edit ~/.vimrc"},
-        z = {"<CMD>e ~/.zshrc<CR>", "Edit ~/.zshrc"},
     },
 
     f = {
