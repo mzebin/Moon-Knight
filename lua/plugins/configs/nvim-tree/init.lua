@@ -28,7 +28,6 @@ vim.g.nvim_tree_icons = {
 
 nvim_tree.setup({
     ignore_ft_on_setup = {"alpha"},
-    auto_close = true,
     hijack_cursor = true,
     update_cwd = true,
     update_to_buf_dir = {
