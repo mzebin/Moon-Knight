@@ -50,7 +50,10 @@ local branch = {
 
 local location = {
     "location",
-    padding = {right = 1},
+    fmt = function (str)
+        return " " .. str .. " "
+    end,
+    padding = 0,
 }
 
 local spaces = function()

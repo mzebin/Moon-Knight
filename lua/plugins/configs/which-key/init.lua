@@ -93,6 +93,7 @@ local mappings = {
         c = {"<CMD>lua _COLORSCHEME()<CR>", "Colorscheme"},
         C = {"<CMD>Telescope commands<CR>", "Commands"},
         h = {"<CMD>Telescope help_tags<CR>", "Find Help"},
+        H = {"<CMD>Telescope highlights<CR>", "Highlights"},
         k = {"<CMD>Telescope keymaps<CR>", "Keymaps"},
         p = {"<CMD>Telescope projects<CR>", "Projects"},
         m = {"<CMD>Telescope man_pages<CR>", "Man Pages"},
