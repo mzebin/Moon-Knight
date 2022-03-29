@@ -125,6 +125,14 @@ local plugins = {
 
     -- Indent Lines
     {"lukas-reineke/indent-blankline.nvim", config = require("plugins.configs.indent-blankline")},
+
+    -- Markdown
+    {
+        "iamcco/markdown-preview.nvim",
+        run = "cd app && yarn install",
+        -- ft = {"markdown"},
+        config = require("plugins.configs.markdown-preview"),
+    }
 }
 
 return packer.startup(function(use)
