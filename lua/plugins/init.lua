@@ -28,13 +28,29 @@ packer.init{
     },
 }
 
+-- Plugins
 local plugins = {
+    -- Packer
     "wbthomason/packer.nvim",
+
+    -- Required
     "nvim-lua/popup.nvim",
     "nvim-lua/plenary.nvim",
-    "kyazdani42/nvim-web-devicons",
+
+    -- Improve startup time
     "lewis6991/impatient.nvim",
-    {"max397574/better-escape.nvim", config = require("plugins.configs.better-escape")},
+
+    -- Better way to escape
+    {
+        "max397574/better-escape.nvim",
+        config = require("plugins.configs.better-escape"),
+    },
+
+    -- Notifications
+    "rcarriga/nvim-notify",
+
+    -- Icons
+    "kyazdani42/nvim-web-devicons",
 
     -- Colorschemes
     "folke/tokyonight.nvim",
@@ -44,68 +60,109 @@ local plugins = {
     "shaunsingh/nord.nvim",
     "tiagovla/tokyodark.nvim",
 
-    -- Completion
-    {"hrsh7th/nvim-cmp", config = require("plugins.configs.cmp")},
-
-    -- Sources
-    "hrsh7th/cmp-nvim-lsp",
-    "hrsh7th/cmp-nvim-lua",
-    "hrsh7th/cmp-buffer",
-    "hrsh7th/cmp-path",
-    "hrsh7th/cmp-cmdline",
-    "saadparwaiz1/cmp_luasnip",
-
-    -- Snippets
-    "L3MON4D3/LuaSnip",
-    "rafamadriz/friendly-snippets",
-
-    -- LSP
-    {"neovim/nvim-lspconfig", config = require("plugins.configs.lsp")},
-    "williamboman/nvim-lsp-installer",
-    "ray-x/lsp_signature.nvim",
-
-    -- Formatter
-    "jose-elias-alvarez/null-ls.nvim",
-
-    -- Telescope
-    {"nvim-telescope/telescope.nvim", config = require("plugins.configs.telescope")},
-    "ahmedkhalf/project.nvim",
-
     -- Treesitter
     {
         "nvim-treesitter/nvim-treesitter",
         run = "<CMD>TSUpdate",
         config = require("plugins.configs.treesitter"),
     },
-    "p00f/nvim-ts-rainbow",
-
-    -- Autopairs
-    {"windwp/nvim-autopairs", config = require("plugins.configs.autopairs")},
-
-    -- Gitsigns
-    {"lewis6991/gitsigns.nvim", config = require("plugins.configs.gitsigns")},
-
-    -- File Tree
-    {"kyazdani42/nvim-tree.lua", config = require("plugins.configs.nvim-tree")},
-
-    -- Tabline
-    {"akinsho/bufferline.nvim", config = require("plugins.configs.bufferline")},
-
-    -- Statusline
-    {"nvim-lualine/lualine.nvim", config = require("plugins.configs.lualine")},
-    {"SmiteshP/nvim-gps", config = require("plugins.configs.nvim-gps")},
-
-    -- Terminal
-    {"akinsho/toggleterm.nvim", config = require("plugins.configs.toggleterm")},
 
     -- Start Page
-    {"goolord/alpha-nvim", config = require("plugins.configs.alpha")},
+    {
+        "goolord/alpha-nvim",
+        requires = {"kyazdani42/nvim-web-devicons"},
+        config = require("plugins.configs.alpha"),
+    },
+
+    -- Statusline
+    {
+        "nvim-lualine/lualine.nvim",
+        requires = {"kyazdani42/nvim-web-devicons"},
+        config = require("plugins.configs.lualine"),
+    },
+    {
+        "SmiteshP/nvim-gps",
+        requires = {"nvim-treesitter/nvim-treesitter"},
+        config = require("plugins.configs.nvim-gps"),
+    },
+
+    -- Tabline
+    {
+        "akinsho/bufferline.nvim",
+        requires = {"kyazdani42/nvim-web-devicons"},
+        config = require("plugins.configs.bufferline"),
+    },
+
+    -- Zen Mode
+    {
+        "folke/zen-mode.nvim",
+        config = require("plugins.configs.zen-mode"),
+    },
+
+    -- Colorizer
+    {
+        "norcalli/nvim-colorizer.lua",
+        config = require("plugins.configs.nvim-colorizer"),
+    },
+
+    -- Indent Lines
+    {
+        "lukas-reineke/indent-blankline.nvim",
+        config = require("plugins.configs.indent-blankline"),
+    },
+
+    -- Autopairs
+    {
+        "windwp/nvim-autopairs",
+        config = require("plugins.configs.autopairs"),
+    },
+
+    -- Gitsigns
+    {
+        "lewis6991/gitsigns.nvim",
+        config = require("plugins.configs.gitsigns"),
+    },
+
+    -- File Tree
+    {
+        "kyazdani42/nvim-tree.lua",
+        requires = {"kyazdani42/nvim-web-devicons"},
+        config = require("plugins.configs.nvim-tree"),
+    },
+
+    -- Outline
+    {
+        "preservim/tagbar",
+        config = require("plugins.configs.tagbar"),
+    },
+
+    -- Telescope
+    {
+        "nvim-telescope/telescope.nvim",
+        requires = {"nvim-lua/plenary.nvim"},
+        config = require("plugins.configs.telescope"),
+    },
+    "nvim-telescope/telescope-fzy-native.nvim",
+    "ahmedkhalf/project.nvim",
+
+    -- Terminal
+    {
+        "akinsho/toggleterm.nvim",
+        config = require("plugins.configs.toggleterm"),
+    },
+
+    -- Markdown Preview
+    {
+        "iamcco/markdown-preview.nvim",
+        run = "cd app && yarn install",
+        config = require("plugins.configs.markdown-preview"),
+    },
 
     -- Keybindings
-    {"folke/which-key.nvim", config = require("plugins.configs.which-key")},
-
-    -- Notifications
-    "rcarriga/nvim-notify",
+    {
+        "folke/which-key.nvim",
+        config = require("plugins.configs.which-key"),
+    },
 
     -- Minimal Plugins
     {
@@ -114,25 +171,33 @@ local plugins = {
         config = require("plugins.configs.mini"),
     },
 
-    -- Colorizer
-    {"norcalli/nvim-colorizer.lua", config = require("plugins.configs.nvim-colorizer")},
-
-    -- Zen Mode
-    {"folke/zen-mode.nvim", config = require("plugins.configs.zen-mode")},
-
-    -- Outline
-    {"preservim/tagbar", config = require("plugins.configs.tagbar")},
-
-    -- Indent Lines
-    {"lukas-reineke/indent-blankline.nvim", config = require("plugins.configs.indent-blankline")},
-
-    -- Markdown
+    -- Completion
     {
-        "iamcco/markdown-preview.nvim",
-        run = "cd app && yarn install",
-        -- ft = {"markdown"},
-        config = require("plugins.configs.markdown-preview"),
-    }
+        "hrsh7th/nvim-cmp",
+        config = require("plugins.configs.cmp"),
+    },
+
+    -- Sources
+    "hrsh7th/cmp-nvim-lsp",
+    "hrsh7th/cmp-nvim-lua",
+    "hrsh7th/cmp-buffer",
+    "hrsh7th/cmp-path",
+
+    -- Snippets
+    "hrsh7th/cmp-vsnip",
+    "hrsh7th/vim-vsnip",
+    "rafamadriz/friendly-snippets",
+
+    -- LSP
+    {
+        "neovim/nvim-lspconfig",
+        config = require("plugins.configs.lsp"),
+    },
+    "williamboman/nvim-lsp-installer",
+    "ray-x/lsp_signature.nvim",
+
+    -- Formatter
+    "jose-elias-alvarez/null-ls.nvim",
 }
 
 return packer.startup(function(use)
