@@ -151,13 +151,6 @@ local plugins = {
         config = require("plugins.configs.toggleterm"),
     },
 
-    -- Markdown Preview
-    {
-        "iamcco/markdown-preview.nvim",
-        run = "cd app && yarn install",
-        config = require("plugins.configs.markdown-preview"),
-    },
-
     -- Keybindings
     {
         "folke/which-key.nvim",
