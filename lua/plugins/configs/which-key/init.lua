@@ -12,7 +12,10 @@ local opts = {
 
 local mappings = {
     A = {"<CMD>Alpha<CR>", "Alpha"},
-    C = {"<CMD>lua _NEOVIM_CONFIGS()<CR>", "Neovim Configs"},
+    C = {
+        "<CMD>lua require('plugins.configs.telescope.functions').nvim_configs()<CR>",
+        "Neovim Configs",
+    },
     O = {"<CMD>TagbarToggle<CR>", "Tagbar"},
     Q = {"<CMD>q<CR>", "Quit"},
     T = {"<CMD>Telescope<CR>", "Telescope"},
@@ -33,7 +36,10 @@ local mappings = {
         f = {"<CMD>Telescope find_files<CR>", "Find Files"},
         g = {"<CMD>Telescope git_files<CR>", "Git Files"},
         n = {"<CMD>ene <BAR> startinsert<CR>", "New File"},
-        o = {"<CMD>lua _OPEN_FILES()<CR>", "Open File"},
+        o = {
+            "<CMD>lua require('plugins.configs.telescope.functions').open_files()<CR>",
+            "Open File",
+        },
     },
 
     g = {
@@ -41,7 +47,10 @@ local mappings = {
         b = {"<CMD>Telescope git_branches<CR>", "Checkout Branch"},
         c = {"<CMD>Telescope git_commits<CR>", "Checkout Commit"},
         d = {"<CMD>Gitsigns diffthis HEAD<CR>", "Diff"},
-        g = {"<CMD>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit"},
+        g = {
+            "<CMD>lua require('plugins.configs.toggleterm.terminals').lazygit()<CR>",
+            "Lazygit",
+        },
         j = {"<CMD>Gitsigns next_hunk<CR>", "Next Hunk"},
         k = {"<CMD>Gitsigns prev_hunk<CR>", "Prev Hunk"},
         l = {"<CMD>Gitsigns blame_line<CR>", "Blame"},
@@ -90,7 +99,10 @@ local mappings = {
     s = {
         name = "Search",
         b = {"<CMD>Telescope git_branches<CR>", "Checkout branch"},
-        c = {"<CMD>lua _COLORSCHEME()<CR>", "Colorscheme"},
+        c = {
+            "<CMD>lua require('plugins.configs.telescope.functions').colorscheme()<CR>",
+            "Colorscheme",
+        },
         C = {"<CMD>Telescope commands<CR>", "Commands"},
         h = {"<CMD>Telescope help_tags<CR>", "Find Help"},
         H = {"<CMD>Telescope highlights<CR>", "Highlights"},
@@ -106,10 +118,19 @@ local mappings = {
         name = "Terminal",
         f = {"<CMD>ToggleTerm direction=float<CR>", "Float"},
         h = {"<CMD>ToggleTerm size=15 direction=horizontal<CR>", "Horizontal"},
-        P = {"<CMD>lua _PYTHON3_TOGGLE()<CR>", "Python3"},
-        R = {"<CMD>lua _RUN_TOGGLE()<CR>", "Run File"},
+        P = {
+            "<CMD>lua require('plugins.configs.toggleterm.terminals').python3()<CR>",
+            "Python3",
+        },
+        R = {
+            "<CMD>lua require('plugins.configs.toggleterm.terminals').run_files()<CR>",
+            "Run File",
+        },
         t = {"<CMD>ToggleTerm direction=tab<CR>", "Tab"},
-        T = {"<CMD>lua _HTOP_TOGGLE()<CR>", "Htop"},
+        T = {
+            "<CMD>lua require('plugins.configs.toggleterm.terminals').htop()<CR>",
+            "Htop",
+        },
         v = {"<CMD>ToggleTerm size=80 direction=vertical<CR>", "Vertical"},
     },
 }

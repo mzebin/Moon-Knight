@@ -1,25 +1,35 @@
+local M = {}
+
+-- Loading Toggleterm
+local packer_status_ok, packer = pcall(require, "packer")
+if not packer_status_ok then
+    vim.notify("Unable to require packer", "Error", {title = "Telescope"})
+end
+
+packer.loader("toggleterm.nvim")
+
 local Terminal = require("toggleterm.terminal").Terminal
 
 -- Lazygit
-function _LAZYGIT_TOGGLE()
+M.lazygit = function ()
     local lazygit = Terminal:new({cmd = "lazygit", hidden = true})
     lazygit:toggle()
 end
 
 -- HTOP
-function _HTOP_TOGGLE()
+M.htop = function ()
     local htop = Terminal:new({cmd = "htop", hidden = true})
     htop:toggle()
 end
 
 -- Python3
-function _PYTHON3_TOGGLE()
+M.python3 = function ()
     local python3 = Terminal:new({cmd = "bpython", hidden = true})
 	python3:toggle()
 end
 
 -- Run Files
-function _RUN_TOGGLE()
+M.run_files = function ()
     -- Get file path
     local file_name = vim.fn.expand('%')
     local file_type = vim.bo.filetype
@@ -42,3 +52,5 @@ function _RUN_TOGGLE()
         lua_run:toggle()
     end
 end
+
+return M

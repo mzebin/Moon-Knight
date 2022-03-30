@@ -4,9 +4,6 @@ if not status_ok then
     return
 end
 
--- Custom Terminals
-require("plugins.configs.toggleterm.custom-terminals")
-
 function _G.set_terminal_keymaps()
     local opts = {noremap = true}
     vim.api.nvim_buf_set_keymap(0, 't', '<ESC>', [[<C-\><C-n>]], opts)
@@ -18,7 +15,7 @@ function _G.set_terminal_keymaps()
     vim.api.nvim_buf_set_keymap(0, 't', '<C-`>', "<ESC><CMD>ToggleTerm<CR>", opts)
 end
 
-vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
+vim.cmd("autocmd! TermOpen term://* lua set_terminal_keymaps()")
 
 toggleterm.setup({
     direction = "float",

@@ -12,9 +12,6 @@ telescope.load_extension("fzy_native")
 telescope.load_extension("projects")
 require("plugins.configs.telescope.projects")
 
--- Load Custom functions
-require("plugins.configs.telescope.custom-functions")
-
 telescope.setup({
     defaults = {
         prompt_prefix = "   ",

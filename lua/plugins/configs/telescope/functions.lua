@@ -1,5 +1,15 @@
+M = {}
+
+-- Loading Telescope
+local packer_status_ok, packer = pcall(require, "packer")
+if not packer_status_ok then
+    vim.notify("Unable to require packer", "Error", {title = "Telescope"})
+end
+
+packer.loader("telescope.nvim")
+
 -- Open File
-function _OPEN_FILES()
+M.open_files = function ()
     require("telescope.builtin").find_files(
         require("telescope.themes").get_dropdown({
             prompt_title = "Open Files",
@@ -9,7 +19,7 @@ function _OPEN_FILES()
 end
 
 -- Choose colorscheme
-function _COLORSCHEME()
+M.colorscheme = function ()
     require("telescope.builtin").colorscheme(
         require("telescope.themes").get_dropdown({
             prompt_title = "Colorscheme",
@@ -31,7 +41,7 @@ function _COLORSCHEME()
 end
 
 -- Search Neovim Configs
-function _NEOVIM_CONFIGS()
+M.nvim_configs = function ()
     require("telescope.builtin").find_files(
         require('telescope.themes').get_dropdown({
             prompt_title = "Neovim Configs",
@@ -40,3 +50,5 @@ function _NEOVIM_CONFIGS()
         })
     )
 end
+
+return M
