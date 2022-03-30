@@ -52,11 +52,9 @@ local plugins = {
     {"rcarriga/nvim-notify"},
 
     -- Colorschemes
-    {"folke/tokyonight.nvim"},
     {"LunarVim/onedarker.nvim"},
     {"Mofiqul/vscode.nvim"},
     {"catppuccin/nvim"},
-    {"shaunsingh/nord.nvim"},
     {"tiagovla/tokyodark.nvim"},
 
     -- Icons
@@ -184,6 +182,15 @@ local plugins = {
         "echasnovski/mini.nvim",
         branch = "stable",
         config = [[require("plugins.configs.mini")]],
+    },
+
+    -- Markdown Preview
+    {
+        "iamcco/markdown-preview.nvim",
+        run = "cd app && yarn install",
+        ft = {"markdown"},
+        cmd = "MarkdownPreview",
+        config = [[require("plugins.configs.markdown-preview")]],
     },
 
     -- Completion
