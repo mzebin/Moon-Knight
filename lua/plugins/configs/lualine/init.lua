@@ -6,7 +6,7 @@ end
 
 local gps_status_ok, gps = pcall(require, "nvim-gps")
 if not gps_status_ok then
-    vim.notify("Unable to require nvim-gps", "error", {title = "Nvim GPS"})
+    vim.notify("Unable to require nvim-gps", "error", {title = "Lualine"})
 end
 
 local hide_in_width = function()
