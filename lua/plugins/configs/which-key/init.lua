@@ -81,7 +81,8 @@ local mappings = {
 
     p = {
         name = "Packer",
-        c = {"<CMD>PackerCompile<CR>", "Compile"},
+        c = {"<CMD>PackerCompile profile=true<CR>", "Compile"},
+        C = {"<CMD>PackerClean<CR>", "Clean"},
         i = {"<CMD>PackerInstall<CR>", "Install"},
         s = {"<CMD>PackerSync<CR>", "Sync"},
         S = {"<CMD>PackerStatus<CR>", "Status"},
