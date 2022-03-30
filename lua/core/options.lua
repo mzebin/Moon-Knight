@@ -21,6 +21,7 @@ local options = {
     pumheight = 10,
     relativenumber = true,
     scrolloff = 10,
+    shell = "/usr/bin/bash",
     shiftwidth = 4,
     showmode = false,
     showtabline = 2,
