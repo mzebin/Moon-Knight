@@ -196,30 +196,36 @@ local plugins = {
     -- Completion
     {
         "hrsh7th/nvim-cmp",
+        event = {"InsertEnter"},
         config = [[require("plugins.configs.cmp")]],
     },
-
-    -- Sources
-    "hrsh7th/cmp-nvim-lsp",
-    "hrsh7th/cmp-nvim-lua",
-    "hrsh7th/cmp-buffer",
-    "hrsh7th/cmp-path",
-
-    -- Snippets
-    {"saadparwaiz1/cmp_luasnip"},
     {"L3MON4D3/LuaSnip"},
-    {"rafamadriz/friendly-snippets"},
+    {"hrsh7th/cmp-nvim-lsp"},
+    {"hrsh7th/cmp-buffer", event = {"InsertEnter"}},
+    {"hrsh7th/cmp-path", event = {"InsertEnter"}},
+    {"hrsh7th/cmp-nvim-lua", event = {"InsertEnter"}},
+    {"saadparwaiz1/cmp_luasnip", event = {"InsertEnter"}},
 
     -- LSP
     {
         "neovim/nvim-lspconfig",
+        event = {"BufRead"},
+        requires = {"hrsh7th/cmp-nvim-lsp"},
         config = [[require("plugins.configs.lsp")]],
     },
-    "williamboman/nvim-lsp-installer",
-    "ray-x/lsp_signature.nvim",
+    {"williamboman/nvim-lsp-installer", event = {"BufRead"}},
+    {"ray-x/lsp_signature.nvim", event = {"BufRead"}},
 
     -- Formatter
-    "jose-elias-alvarez/null-ls.nvim",
+    {
+        "jose-elias-alvarez/null-ls.nvim",
+        requires = {
+            "nvim-lua/plenary.nvim",
+            "neovim/nvim-lspconfig",
+        },
+        ft = {"python", "lua"},
+        config = [[require("plugins.configs.null-ls")]],
+    },
 }
 
 return packer.startup(function(use)

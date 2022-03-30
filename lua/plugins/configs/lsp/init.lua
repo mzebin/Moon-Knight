@@ -9,4 +9,3 @@ require("plugins.configs.lsp.handlers").setup()
 
 -- Other Plugins
 require("plugins.configs.lsp.lsp-signature")
-require("plugins.configs.lsp.null-ls")
