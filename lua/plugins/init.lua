@@ -175,8 +175,12 @@ local plugins = {
     {
         "echasnovski/mini.nvim",
         branch = "stable",
+        event = {"BufAdd", "BufRead"},
         config = [[require("plugins.configs.mini")]],
     },
+
+    -- Close Buffers
+    {"famiu/bufdelete.nvim"},
 
     -- Markdown Preview
     {

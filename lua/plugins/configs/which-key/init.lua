@@ -24,10 +24,11 @@ local mappings = {
 
     b = {
         name = "Buffer",
-        c = {"<CMD>lua MiniBufremove.delete()<CR>", "Close Buffer"},
+        c = {"<CMD>Bdelete<CR>", "Close Buffer"},
         f = {"<CMD>Telescope buffers theme=dropdown previewer=false", "Find Buffers"},
         n = {"<CMD>bnext<CR>", "Next Buffer"},
         p = {"<CMD>bprevious<CR>", "Previous Buffer"},
+        w = {"<CMD>Bwipeout<CR>", "Wipeout Buffer"}
     },
 
     f = {
