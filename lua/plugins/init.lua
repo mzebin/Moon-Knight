@@ -78,7 +78,7 @@ local plugins = {
     {
         "nvim-lualine/lualine.nvim",
         requires = {"kyazdani42/nvim-web-devicons"},
-        event = {"BufAdd", "BufReadPre", "FileReadPre"},
+        event = {"BufNewFile", "BufAdd", "BufReadPre", "FileReadPre"},
         config = [[require("plugins.configs.lualine")]],
     },
 
@@ -86,7 +86,7 @@ local plugins = {
     {
         "akinsho/bufferline.nvim",
         requires = {"kyazdani42/nvim-web-devicons"},
-        event = {"BufAdd", "BufReadPre", "FileReadPre"},
+        event = {"BufNewFile", "BufAdd", "BufReadPre", "FileReadPre"},
         config = [[require("plugins.configs.bufferline")]],
     },
 
@@ -100,14 +100,14 @@ local plugins = {
     -- Colorizer
     {
         "norcalli/nvim-colorizer.lua",
-        event = {"BufAdd", "BufRead"},
+        event = {"BufNewFile", "BufAdd", "BufRead"},
         config = [[require("plugins.configs.nvim-colorizer")]],
     },
 
     -- Indent Lines
     {
         "lukas-reineke/indent-blankline.nvim",
-        event = {"BufAdd", "BufRead"},
+        event = {"BufNewFile", "BufAdd", "BufRead"},
         config = [[require("plugins.configs.indent-blankline")]],
     },
 
@@ -174,7 +174,7 @@ local plugins = {
     {
         "echasnovski/mini.nvim",
         branch = "stable",
-        event = {"BufAdd", "BufRead"},
+        event = {"BufNewFile", "BufAdd", "BufRead"},
         config = [[require("plugins.configs.mini")]],
     },
 
@@ -196,11 +196,14 @@ local plugins = {
         event = {"InsertEnter"},
         config = [[require("plugins.configs.cmp")]],
     },
-    {"L3MON4D3/LuaSnip"},
-    {"hrsh7th/cmp-nvim-lsp"},
+    {"hrsh7th/cmp-nvim-lsp", event = {"BufReadPre"}},
     {"hrsh7th/cmp-buffer", event = {"InsertEnter"}},
     {"hrsh7th/cmp-path", event = {"InsertEnter"}},
     {"hrsh7th/cmp-nvim-lua", event = {"InsertEnter"}},
+
+    -- Snippets
+    {"rafamadriz/friendly-snippets", event = {"InsertEnter"}},
+    {"L3MON4D3/LuaSnip", event = {"InsertEnter"}},
     {"saadparwaiz1/cmp_luasnip", event = {"InsertEnter"}},
 
     -- LSP

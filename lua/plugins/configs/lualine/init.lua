@@ -47,6 +47,11 @@ local config = {
         component_separators = {},
         section_separators = {},
 
+        -- Other Options
+        globalstatus = true,
+        disabled_filetypes = {"alpha", "tagbar"},
+
+        -- Appearance
         theme = {
             normal = {c = {fg = colors.fg, bg = colors.bg}},
             inactive = {c = {fg = colors.fg, bg = colors.bg}},
