@@ -82,12 +82,6 @@ local plugins = {
         event = {"BufAdd", "BufReadPre", "FileReadPre"},
         config = [[require("plugins.configs.lualine")]],
     },
-    {
-        "SmiteshP/nvim-gps",
-        requires = {"nvim-treesitter/nvim-treesitter"},
-        event = {"BufAdd", "BufReadPre", "FileReadPre"},
-        config = [[require("plugins.configs.nvim-gps")]],
-    },
 
     -- Tabline
     {
@@ -147,12 +141,12 @@ local plugins = {
     },
 
     -- Telescope
+    {"ahmedkhalf/project.nvim"},
     {
         "nvim-telescope/telescope.nvim",
         requires = {
             "nvim-lua/plenary.nvim",
-            "nvim-telescope/telescope-fzy-native.nvim",
-            "ahmedkhalf/project.nvim",
+            {"nvim-telescope/telescope-fzy-native.nvim", opt = true},
         },
         cmd = {"Telescope"},
         config = [[require("plugins.configs.telescope")]],
