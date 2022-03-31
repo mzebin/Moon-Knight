@@ -55,7 +55,6 @@ local plugins = {
     {"LunarVim/onedarker.nvim"},
     {"Mofiqul/vscode.nvim"},
     {"catppuccin/nvim"},
-    {"tiagovla/tokyodark.nvim"},
 
     -- Icons
     {"kyazdani42/nvim-web-devicons"},

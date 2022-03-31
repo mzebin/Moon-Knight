@@ -4,12 +4,53 @@ if not status_ok then
     return
 end
 
+-- Colors
+local theme = "plugins.configs.lualine.themes.catppuccin"
+local colors_status_ok, colors = pcall(require, theme)
+if not colors_status_ok then
+    vim.notify(
+        "Lualine theme not found: " .. theme,
+        "Error",
+        {title = "Lualine"}
+    )
+    return
+end
+
+-- Mode Colors
+local mode_colors = {
+    n = colors.cyan,
+    i = colors.magenta,
+    v = colors.blue,
+    [''] = colors.blue,
+    V = colors.blue,
+    c = colors.green,
+    no = colors.cyan,
+    s = colors.orange,
+    S = colors.orange,
+    [''] = colors.orange,
+    ic = colors.yellow,
+    R = colors.violet,
+    Rv = colors.violet,
+    cv = colors.cyan,
+    ce = colors.cyan,
+    r = colors.red,
+    rm = colors.red,
+    ['r?'] = colors.red,
+    ['!'] = colors.cyan,
+    t = colors.cyan,
+}
+
 -- Config
 local config = {
     options = {
         -- Disable component & section separators
         component_separators = {},
         section_separators = {},
+
+        theme = {
+            normal = {c = {fg = colors.fg, bg = colors.bg}},
+            inactive = {c = {fg = colors.fg, bg = colors.bg}},
+        },
     },
 
     sections = {
@@ -43,14 +84,13 @@ local conditions = {
     hide_in_width = function()
         return vim.fn.winwidth(0) > 80
     end,
-    check_git_workspace = function()
-        local filepath = vim.fn.expand("%:p:h")
-        local gitdir = vim.fn.finddir(".git", filepath .. ";")
-        return gitdir and #gitdir > 0 and #gitdir < #filepath
-    end,
 }
 
 -- Helper Functions
+local function get_mode_color()
+    return {fg = mode_colors[vim.fn.mode()]}
+end
+
 local function insert_left(component)
     table.insert(config.sections.lualine_c, component)
 end
@@ -66,6 +106,7 @@ insert_left({
     function()
         return "▊"
     end,
+    color = get_mode_color,
     padding = {left = 0, right = 1},
 })
 
@@ -74,12 +115,14 @@ insert_left({
     function ()
         return ""
     end,
+    color = get_mode_color,
 })
 
 -- Git Branch
 insert_left({
     "branch",
     icon = "",
+    color = {fg = colors.violet, gui = 'bold'},
 })
 
 -- Diagnostics
@@ -88,7 +131,11 @@ insert_left({
     sources = {"nvim_diagnostic"},
     sections = {"error", "warn", "info"},
     symbols = {error = " ", warn = " ", info = " "},
-    colored = true,
+    diagnostics_color = {
+        color_error = {fg = colors.red},
+        color_warn = {fg = colors.yellow},
+        color_info = {fg = colors.cyan},
+    },
     update_in_insert = false,
     always_visible = true,
 })
@@ -98,7 +145,12 @@ insert_left({
 -- Git Diff
 insert_right({
     "diff",
-    symbols = {added = ' ', modified = '柳 ', removed = ' '},
+    symbols = {added = " ", modified = "柳 ", removed = " "},
+    diff_color = {
+        added = {fg = colors.green},
+        modified = {fg = colors.yellow},
+        removed = {fg = colors.red},
+    },
 })
 
 -- Spaces
@@ -113,6 +165,7 @@ insert_right({
 insert_right({
     "o:encoding",
     fmt = string.upper,
+    color = {fg = colors.green, gui = 'bold'},
     cond = conditions.hide_in_width,
 })
 
@@ -143,10 +196,11 @@ insert_right({
 
 -- Bar
 insert_right({
-  function()
-    return "▊"
-  end,
-  padding = {right = 0, left = 1},
+    function()
+        return "▊"
+    end,
+    color = get_mode_color,
+    padding = {right = 0, left = 1},
 })
 
 -- Initializing Lualine
