@@ -46,18 +46,22 @@ nvim
 │       │   │   ├── handlers.lua
 │       │   │   ├── init.lua
 │       │   │   ├── lsp-installer.lua
-│       │   │   ├── lsp-signature.lua
-│       │   │   └── null-ls.lua
+│       │   │   └── lsp-signature.lua
 │       │   ├── lualine
+│       │   │   ├── themes
+│       │   │   │   ├── catppuccin.lua
+│       │   │   │   ├── onedarker.lua
+│       │   │   │   └── vscode.lua
 │       │   │   └── init.lua
 │       │   ├── markdown-preview
 │       │   │   └── init.lua
 │       │   ├── mini
-│       │   │   ├── bufremove.lua
 │       │   │   ├── comment.lua
 │       │   │   ├── init.lua
 │       │   │   ├── surround.lua
 │       │   │   └── trailspace.lua
+│       │   ├── null-ls
+│       │   │   └── init.lua
 │       │   ├── nvim-colorizer
 │       │   │   └── init.lua
 │       │   ├── nvim-gps
@@ -67,12 +71,12 @@ nvim
 │       │   ├── tagbar
 │       │   │   └── init.lua
 │       │   ├── telescope
-│       │   │   ├── custom-functions.lua
+│       │   │   ├── functions.lua
 │       │   │   ├── init.lua
 │       │   │   └── projects.lua
 │       │   ├── toggleterm
-│       │   │   ├── custom-terminals.lua
-│       │   │   └── init.lua
+│       │   │   ├── init.lua
+│       │   │   └── terminals.lua
 │       │   ├── treesitter
 │       │   │   └── init.lua
 │       │   ├── which-key
