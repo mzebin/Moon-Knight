@@ -21,13 +21,13 @@ local mode_colors = {
     n = colors.cyan,
     i = colors.magenta,
     v = colors.blue,
-    [''] = colors.blue,
+    [""] = colors.blue,
     V = colors.blue,
     c = colors.green,
     no = colors.cyan,
     s = colors.orange,
     S = colors.orange,
-    [''] = colors.orange,
+    [""] = colors.orange,
     ic = colors.yellow,
     R = colors.violet,
     Rv = colors.violet,
@@ -35,8 +35,8 @@ local mode_colors = {
     ce = colors.cyan,
     r = colors.red,
     rm = colors.red,
-    ['r?'] = colors.red,
-    ['!'] = colors.cyan,
+    ["r?"] = colors.red,
+    ["!"] = colors.cyan,
     t = colors.cyan,
 }
 
@@ -127,7 +127,7 @@ insert_left({
 insert_left({
     "branch",
     icon = "",
-    color = {fg = colors.violet, gui = 'bold'},
+    color = {fg = colors.violet, gui = "bold"},
 })
 
 -- Diagnostics
@@ -170,7 +170,6 @@ insert_right({
 insert_right({
     "o:encoding",
     fmt = string.upper,
-    color = {fg = colors.green, gui = 'bold'},
     cond = conditions.hide_in_width,
 })
 
