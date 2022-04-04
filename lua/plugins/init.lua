@@ -202,8 +202,12 @@ local plugins = {
     {"hrsh7th/cmp-nvim-lua", event = {"InsertEnter"}},
 
     -- Snippets
+    {
+        "L3MON4D3/LuaSnip",
+        event = {"InsertEnter"},
+        config = [[require("plugins.configs.snippets")]]
+    },
     {"rafamadriz/friendly-snippets", event = {"InsertEnter"}},
-    {"L3MON4D3/LuaSnip", event = {"InsertEnter"}},
     {"saadparwaiz1/cmp_luasnip", event = {"InsertEnter"}},
 
     -- LSP
