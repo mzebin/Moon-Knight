@@ -68,6 +68,8 @@ nvim
 │       │   │   └── init.lua
 │       │   ├── nvim-tree
 │       │   │   └── init.lua
+│       │   ├── snippets
+│       │   │   └── init.lua
 │       │   ├── tagbar
 │       │   │   └── init.lua
 │       │   ├── telescope
